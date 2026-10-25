@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="images/game-and-playground.png" alt="The game with the Script Playground open beside it, running a cow-hunting script" width="860">
+<img src="images/game-and-playground.png" alt="The game with the Script Playground open beside it, running a pickpocketing block script" width="900">
 
 # 2009scape Script Playground
 
