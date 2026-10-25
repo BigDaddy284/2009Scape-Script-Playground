@@ -1,13 +1,49 @@
+<div align="center">
+
+<img src="images/game-and-playground.png" alt="The game with the Script Playground open beside it, running a cow-hunting script" width="860">
+
 # 2009scape Script Playground
 
-Script your character in the 2009scape single-player game, with Scratch-style blocks or JavaScript that runs live in game. Add-on only, game not included.
+**Script your character in the 2009scape single-player game, with Scratch-style blocks or JavaScript that runs live in game.**
+
+Add-on only, game not included.
+
+[Thanks](#thanks-and-accreditation) · [What it is](#what-it-is) · [Screenshots](#screenshots) · [Setup](#setup) · [Using it](#using-it) · [Building](#building-from-source) · [Licence](#licence)
+
+</div>
+
+---
+
+## Thanks and accreditation
+
+- **[2009scape](https://gitlab.com/2009scape/2009scape)** and its contributors, for the game server,
+  the game client and its plugin system, and the
+  [single-player release](https://gitlab.com/2009scape/singleplayer/windows) this add-on is built
+  on. 2009scape is licensed under the GNU AGPL v3.
+- **Jagex Ltd.** RuneScape, its game content, art and the original game client are the property of
+  Jagex. None of their files are included here.
+- **[GraalJS](https://github.com/oracle/graaljs)** (Oracle, Universal Permissive License 1.0), the
+  JavaScript engine that runs scripts, with **[ICU4J](https://github.com/unicode-org/icu)**
+  (Unicode/ICU License).
+- **[FlatLaf](https://github.com/JFormDesigner/FlatLaf)** (FormDev Software, Apache 2.0), the
+  Playground's look and theme.
+- **[RSyntaxTextArea](https://github.com/bobbylight/RSyntaxTextArea)** (Robert Futrell, BSD
+  3-Clause), the JavaScript editor.
+- **[Scratch](https://scratch.mit.edu)** (MIT Media Lab), the inspiration for the block editor. The
+  block editor is our own code and uses no Scratch code.
+- **[Adventure Land](https://adventure.land)**, the coding MMORPG, whose scripting style inspired
+  the JavaScript function names (`smart_move`, `get_nearest_monster`, `attack`, `loot`,
+  `game_log`, `set_message`). No Adventure Land code is used.
+- **[The RuneScape Wiki](https://runescape.wiki)**, used as a reference for how the 2009 game
+  worked (skills, levels and items).
+- **[Anthropic's Claude](https://claude.ai/code)**, the AI coding assistant that helped write Code Edition, working from the requests and testing of the project's owner. See [Made with AI](#made-with-ai).
 
 ## A hobby project, offered as-is
 
-This is a hobby project, made for fun in spare time. It is offered as-is, with no warranty, no
-support and no promised updates. There may be bugs, and some may never be fixed. Issues are turned
+This is a hobby project, made for fun in spare time. It is offered **as-is, with no warranty, no
+support and no promised updates.** There may be bugs, and some may never be fixed. Issues are turned
 off on this repository and I'm not able to answer questions, take requests or fix problems. You're
-welcome to use it, learn from it and change it for your own use under the terms of the license, at
+welcome to use it, learn from it and change it for your own use under the terms of the [license](LICENSE), at
 your own risk. Back up anything you care about, such as your characters in `game\data\players`
 and your own scripts in the `scripts` folder of your game folder.
 
@@ -43,6 +79,29 @@ scripting to that single-player game:
 
 The game files themselves (server, game client, cache and Java) are **not** in this repository.
 You download the official 2009scape single-player release and install this add-on on top of it.
+
+## Screenshots
+
+<table>
+  <tr>
+    <td width="50%"><img src="images/block-editor.png" alt="The block editor with a chop-oaks-and-bank script and the Tools menu open"><br><sub><b>Block scripts.</b> Drag blocks together like Scratch. Tools copies, pastes and inserts whole scripts.</sub></td>
+    <td width="50%"><img src="images/stopped-reason.png" alt="A script stopped with the reason shown in the Playground and the game chat"><br><sub><b>Plain-English errors.</b> When a block can't do its job, it turns red and says why, here a Woodcutting level that is too low.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="images/agility-script.png" alt="A Gnome Stronghold agility script with the Run block set to Auto"><br><sub><b>Every skill has blocks.</b> A four-block Agility script that walks to the Gnome Stronghold course and runs laps.</sub></td>
+    <td width="50%"><img src="images/grab-coordinates.png" alt="The coordinate picker showing 3222, 3240 under a tile in the game"><br><sub><b>Grab Coordinates.</b> Point at any tile in the game to copy its map coordinates into a Walk To block.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="images/cheats.png" alt="The Cheats window listing 195 cheat codes with what each does"><br><sub><b>Cheats list.</b> All 195 of the game's cheat codes, searchable, with what each one does. Double-click to copy.</sub></td>
+    <td width="50%" align="center"><img src="images/launcher.png" alt="The Code Edition launcher with Launch Game and Launch Script Playground buttons" width="300"><br><sub><b>The launcher.</b> One click starts the game world and the game window, and backs up your characters.</sub></td>
+  </tr>
+</table>
+
+## Made with AI
+
+Code Edition was built with the help of AI. The script engine, the Script Playground and its block
+editor, the Code orb, the launcher and the packaging were written with Anthropic's Claude as a
+coding assistant, working from the requests and testing of the project's owner.
 
 ## Requirements
 
@@ -207,30 +266,6 @@ Exceptions, which keep their own licences:
   the **GNU AGPL v3**, the licence of 2009scape.
 - The libraries in `overlay/codeedition/lib/` and inside `launcher.jar`. See
   [`THIRD-PARTY.txt`](THIRD-PARTY.txt) and `third-party-licenses/`.
-
-## Credits and acknowledgements
-
-- **[2009scape](https://gitlab.com/2009scape/2009scape)** and its contributors, for the game server,
-  the game client and its plugin system, and the
-  [single-player release](https://gitlab.com/2009scape/singleplayer/windows) this add-on is built
-  on. 2009scape is licensed under the GNU AGPL v3.
-- **Jagex Ltd.** RuneScape, its game content, art and the original game client are the property of
-  Jagex. None of their files are included here.
-- **[GraalJS](https://github.com/oracle/graaljs)** (Oracle, Universal Permissive License 1.0), the
-  JavaScript engine that runs scripts, with **[ICU4J](https://github.com/unicode-org/icu)**
-  (Unicode/ICU License).
-- **[FlatLaf](https://github.com/JFormDesigner/FlatLaf)** (FormDev Software, Apache 2.0), the
-  Playground's look and theme.
-- **[RSyntaxTextArea](https://github.com/bobbylight/RSyntaxTextArea)** (Robert Futrell, BSD
-  3-Clause), the JavaScript editor.
-- **[Scratch](https://scratch.mit.edu)** (MIT Media Lab), the inspiration for the block editor. The
-  block editor is our own code and uses no Scratch code.
-- **[Adventure Land](https://adventure.land)**, the coding MMORPG, whose scripting style inspired
-  the JavaScript function names (`smart_move`, `get_nearest_monster`, `attack`, `loot`,
-  `game_log`, `set_message`). No Adventure Land code is used.
-- **[The RuneScape Wiki](https://runescape.wiki)**, used as a reference for how the 2009 game
-  worked (skills, levels and items).
-- Built by **BigDaddy284**, with help from Claude (Anthropic).
 
 ## Disclaimer
 
