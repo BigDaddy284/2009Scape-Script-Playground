@@ -1,0 +1,37 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "walk",
+      "args": [
+        "Falador farming patches"
+      ]
+    },
+    {
+      "type": "harvest",
+      "args": [
+        "Herb patch"
+      ]
+    },
+    {
+      "type": "rake",
+      "args": [
+        "Herb patch"
+      ]
+    },
+    {
+      "type": "compost",
+      "args": [
+        "Herb patch"
+      ]
+    },
+    {
+      "type": "plant",
+      "args": [
+        "Guam seed",
+        "Herb patch"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "walk",
+      "args": [
+        "Gnome Stronghold course"
+      ]
+    },
+    {
+      "type": "run_course",
+      "args": [
+        "Gnome Stronghold course",
+        "10"
+      ]
+    }
+  ]
+}

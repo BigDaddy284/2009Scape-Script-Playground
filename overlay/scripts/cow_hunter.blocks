@@ -1,0 +1,20 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {"type": "walk", "args": ["Lumbridge Cows"]},
+    {"type": "retaliate", "args": ["On"]},
+    {"type": "forever", "args": [], "body": [
+      {"type": "if", "args": ["HP Below %", "50"], "body": [
+        {"type": "eat", "args": ["Any food"]}
+      ]},
+      {"type": "attack", "args": ["Cow"]},
+      {"type": "if", "args": ["Inventory Is Not Full", ""], "body": [
+        {"type": "pickup", "args": ["Cowhide"]}
+      ]},
+      {"type": "if", "args": ["Has Item", "Bones"], "body": [
+        {"type": "bury", "args": ["Any bones"]}
+      ]}
+    ]}
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {"type": "forever", "args": [], "body": [
+      {"type": "walk", "args": ["Varrock East Mine"]},
+      {"type": "until", "args": ["Inventory Is Full", ""], "body": [
+        {"type": "mine", "args": ["Copper"]},
+        {"type": "if", "args": ["Inventory Is Not Full", ""], "body": [
+          {"type": "mine", "args": ["Tin"]}
+        ]}
+      ]},
+      {"type": "walk", "args": ["Varrock East Bank"]},
+      {"type": "openbank", "args": []},
+      {"type": "deposit", "args": ["Copper ore"]},
+      {"type": "deposit", "args": ["Tin ore"]},
+      {"type": "closebank", "args": []}
+    ]}
+  ]
+}

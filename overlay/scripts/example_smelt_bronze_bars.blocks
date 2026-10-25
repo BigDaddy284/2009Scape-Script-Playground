@@ -1,0 +1,61 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "repeat",
+      "args": [
+        "10"
+      ],
+      "body": [
+        {
+          "type": "walk",
+          "args": [
+            "Al Kharid bank"
+          ]
+        },
+        {
+          "type": "openbank",
+          "args": []
+        },
+        {
+          "type": "deposit",
+          "args": [
+            "Inventory All"
+          ]
+        },
+        {
+          "type": "withdraw",
+          "args": [
+            "Copper ore",
+            "14"
+          ]
+        },
+        {
+          "type": "withdraw",
+          "args": [
+            "Tin ore",
+            "14"
+          ]
+        },
+        {
+          "type": "closebank",
+          "args": []
+        },
+        {
+          "type": "walk",
+          "args": [
+            "Al Kharid furnace"
+          ]
+        },
+        {
+          "type": "make_item",
+          "args": [
+            "Bronze bar",
+            "0"
+          ]
+        }
+      ]
+    }
+  ]
+}

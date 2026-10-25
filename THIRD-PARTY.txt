@@ -1,0 +1,22 @@
+Third-party software and credits
+================================
+
+Shipped in this repository (unchanged)
+  GraalJS 22.3.5 (js, regex, truffle-api, graal-sdk)   overlay/codeedition/lib/
+      Oracle and/or its affiliates. Universal Permissive License 1.0.
+      https://github.com/oracle/graaljs       third-party-licenses/GraalJS-UPL-1.0.txt
+  ICU4J 71.1                                            overlay/codeedition/lib/
+      Unicode, Inc. Unicode/ICU License.
+      https://github.com/unicode-org/icu      third-party-licenses/ICU4J-LICENSE.txt
+  FlatLaf 3.4.1                                         inside overlay/codeedition/launcher.jar
+      FormDev Software GmbH. Apache License 2.0.
+      https://github.com/JFormDesigner/FlatLaf third-party-licenses/FlatLaf-Apache-2.0.txt
+  RSyntaxTextArea 3.4.0                                 inside overlay/codeedition/launcher.jar
+      Robert Futrell. BSD 3-Clause License.
+      https://github.com/bobbylight/RSyntaxTextArea third-party-licenses/RSyntaxTextArea-BSD-3-Clause.txt
+
+Built against (not included)
+  2009scape single-player release (server.jar, client.jar and plugin API)
+      The 2009scape team and contributors. GNU AGPL v3.
+      https://gitlab.com/2009scape/2009scape   third-party-licenses/2009scape-AGPL-3.0.txt
+  source/overrides/ contains modified 2009scape server classes and stays under the AGPL v3.

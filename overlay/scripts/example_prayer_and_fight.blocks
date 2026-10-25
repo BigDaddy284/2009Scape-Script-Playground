@@ -1,0 +1,55 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "walk",
+      "args": [
+        "Lumbridge Cows"
+      ]
+    },
+    {
+      "type": "retaliate",
+      "args": [
+        "On"
+      ]
+    },
+    {
+      "type": "prayer",
+      "args": [
+        "Thick skin",
+        "On"
+      ]
+    },
+    {
+      "type": "repeat",
+      "args": [
+        "20"
+      ],
+      "body": [
+        {
+          "type": "if",
+          "args": [
+            "Prayer Points Below",
+            "5"
+          ],
+          "body": [
+            {
+              "type": "prayer",
+              "args": [
+                "Thick skin",
+                "Off"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "attack",
+          "args": [
+            "Cow"
+          ]
+        }
+      ]
+    }
+  ]
+}

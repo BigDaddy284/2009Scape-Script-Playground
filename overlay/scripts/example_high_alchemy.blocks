@@ -1,0 +1,22 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "until",
+      "args": [
+        "Does Not Have Item",
+        "Nature rune"
+      ],
+      "body": [
+        {
+          "type": "cast",
+          "args": [
+            "High alchemy",
+            "Yew longbow"
+          ]
+        }
+      ]
+    }
+  ]
+}

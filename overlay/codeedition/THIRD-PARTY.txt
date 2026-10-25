@@ -1,0 +1,6 @@
+Code Edition uses these libraries, shipped unchanged in codeedition\lib and inside launcher.jar:
+  GraalJS 22.3.5 (js, regex, truffle-api, graal-sdk): Universal Permissive License 1.0
+  ICU4J 71.1: Unicode/ICU license
+  FlatLaf 3.4.1: Apache License 2.0
+  RSyntaxTextArea 3.4.0: BSD 3-Clause license
+The game itself is 2009scape, licensed under the AGPL (see LICENSE).

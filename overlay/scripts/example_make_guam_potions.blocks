@@ -1,0 +1,57 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "repeat",
+      "args": [
+        "5"
+      ],
+      "body": [
+        {
+          "type": "walk",
+          "args": [
+            "Draynor Bank"
+          ]
+        },
+        {
+          "type": "openbank",
+          "args": []
+        },
+        {
+          "type": "deposit",
+          "args": [
+            "Inventory All"
+          ]
+        },
+        {
+          "type": "withdraw",
+          "args": [
+            "Clean guam",
+            "14"
+          ]
+        },
+        {
+          "type": "withdraw",
+          "args": [
+            "Vial of water",
+            "14"
+          ]
+        },
+        {
+          "type": "closebank",
+          "args": []
+        },
+        {
+          "type": "use_item_on_item",
+          "args": [
+            "Clean guam",
+            "Vial of water",
+            "0",
+            "Guam potion(unf)"
+          ]
+        }
+      ]
+    }
+  ]
+}

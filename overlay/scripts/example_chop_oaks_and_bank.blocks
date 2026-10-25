@@ -1,0 +1,53 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "forever",
+      "args": [],
+      "body": [
+        {
+          "type": "walk",
+          "args": [
+            "Oak"
+          ]
+        },
+        {
+          "type": "chop",
+          "args": [
+            "Oak"
+          ]
+        },
+        {
+          "type": "if",
+          "args": [
+            "Inventory Is Full",
+            ""
+          ],
+          "body": [
+            {
+              "type": "walk",
+              "args": [
+                "Draynor Bank"
+              ]
+            },
+            {
+              "type": "openbank",
+              "args": []
+            },
+            {
+              "type": "deposit",
+              "args": [
+                "Inventory 2–28"
+              ]
+            },
+            {
+              "type": "closebank",
+              "args": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

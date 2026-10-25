@@ -1,0 +1,11 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {"type": "walk", "args": ["Varrock West Bank"]},
+    {"type": "say", "args": ["Made it to Varrock!"]},
+    {"type": "walk", "args": ["Barbarian Village"]},
+    {"type": "walk", "args": ["Lumbridge"]},
+    {"type": "say", "args": ["Back home in Lumbridge."]}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "walk",
+      "args": [
+        "Port Khazard obelisk"
+      ]
+    },
+    {
+      "type": "make_item",
+      "args": [
+        "Spirit wolf pouch",
+        "1"
+      ]
+    },
+    {
+      "type": "summon",
+      "args": [
+        "Spirit wolf"
+      ]
+    },
+    {
+      "type": "recharge",
+      "args": [
+        "Summoning"
+      ]
+    }
+  ]
+}

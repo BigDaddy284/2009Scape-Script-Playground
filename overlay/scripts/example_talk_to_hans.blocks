@@ -1,0 +1,81 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "walk",
+      "args": [
+        "Lumbridge"
+      ]
+    },
+    {
+      "type": "talk",
+      "args": [
+        "Hans"
+      ]
+    },
+    {
+      "type": "press_key",
+      "args": [
+        "Space"
+      ]
+    },
+    {
+      "type": "wait_for",
+      "args": [
+        "Options",
+        "10"
+      ]
+    },
+    {
+      "type": "press_key",
+      "args": [
+        "1"
+      ]
+    },
+    {
+      "type": "repeat",
+      "args": [
+        "6"
+      ],
+      "body": [
+        {
+          "type": "if",
+          "args": [
+            "Options Are Showing",
+            ""
+          ],
+          "body": [
+            {
+              "type": "press_key",
+              "args": [
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "if",
+          "args": [
+            "Dialogue Is Open",
+            ""
+          ],
+          "body": [
+            {
+              "type": "press_key",
+              "args": [
+                "Space"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "wait",
+          "args": [
+            "1"
+          ]
+        }
+      ]
+    }
+  ]
+}
