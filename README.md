@@ -2,9 +2,14 @@
 
 Script your character in the 2009scape single-player game, with Scratch-style blocks or JavaScript that runs live in game. Add-on only, game not included.
 
-> **Hobby project.** This is something I built for fun in my spare time. It is provided as is, with
-> no support, no warranty and no promise of updates. Issues and pull requests may not get a reply.
-> Use it at your own risk, and back up your characters before you try it.
+## A hobby project, offered as-is
+
+This is a hobby project, made for fun in spare time. It is offered as-is, with no warranty, no
+support and no promised updates. There may be bugs, and some may never be fixed. Issues are turned
+off on this repository and I'm not able to answer questions, take requests or fix problems. You're
+welcome to use it, learn from it and change it for your own use under the terms of the license, at
+your own risk. Back up anything you care about, such as your characters in `game\data\players`
+and your own scripts in the `scripts` folder of your game folder.
 
 ---
 
