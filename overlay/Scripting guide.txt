@@ -1,0 +1,90 @@
+Script Playground: scripting guide
+==================================
+
+Block scripts (the easy way)
+  Click New, then "Block script". Build the script from blocks, then press Run.
+  Every block is explained in "Block guide.txt", and the scripts folder has an example
+  for each kind of skill (example_....blocks).
+
+JavaScript (advanced)
+  Click New, then "JavaScript (advanced)". The rest of this guide is about JavaScript scripts.
+
+Scripts are JavaScript (modern: classes, async/await, destructuring, spread, template strings).
+A script runs on the game tick, every 0.6 seconds, until you press Stop.
+
+Two ways to write a script
+  1. A loop with setInterval. Your function runs once per tick:
+
+       setInterval(() => {
+         if (is_busy()) return;              // wait for the last action to finish
+         const cow = get_nearest_monster({ name: "Cow" });
+         if (cow) attack(cow);
+       }, 600);
+
+  2. An async function that waits for things:
+
+       (async () => {
+         await smart_move("lumbridge cows");
+         while (true) {
+           const cow = get_nearest_monster({ name: "Cow" });
+           if (!cow) { await sleep(1200); continue; }
+           if (attack(cow) === "door") { await until_idle(); continue; }
+           await wait_until(() => !get_targeted_monster(), 60000);
+         }
+       })();
+
+Rules of thumb
+  - Start one action at a time. Check is_busy() before starting a new one.
+  - Never write a loop without an await or setInterval. A loop that never pauses is stopped
+    after one tick, with a message in the log.
+  - Errors show in the log with the script name and line number.
+  - Scripts can't reach files, the internet or Java. They only control your character.
+
+Moving
+  smart_move(place or {x, y, z} or monster name, {within})   walks there, opening doors and gates; returns a promise
+  move(x, y)                       walks to an exact tile
+  stop_moving()
+  Places: lumbridge, lumbridge cows, lumbridge chickens, varrock west bank, varrock east bank,
+          varrock square, draynor bank, draynor willows, barbarian village, falador east bank,
+          al kharid mine, grand exchange
+
+Doors and gates
+  blocking_door(place or monster)  the closed door or gate in the way, or null
+  can_reach(place or monster)      true if you can walk there without opening anything
+  open_door(door)                  walks to it and opens it
+  attack() and smart_move() already open doors and gates for you.
+
+Fighting
+  get_nearest_monster({name, min_level, max_level, radius})
+  get_monsters(name, radius)
+  attack(monster)                  true, or "door" if it went to open a door first (attack again when not busy)
+  get_targeted_monster()           what you're fighting, or null
+  in_combat()
+  eat(food), drink(potion), bury(bones), equip(item)
+  hp_percent()
+
+Items and objects
+  items(), equipment(), bank_items(), count(name), has(name)
+  ground_items(radius), loot(names, {x, y, radius})
+  get_objects(name, radius), interact(objectName, option), interact_at(object, option)
+  get_rock("Copper ore")           rocks are all called "Rocks"; this finds the right one
+  use_item(name, option), use_on(itemName, objectName), talk_to(monster, option)
+  bank_deposit_all(), bank_withdraw(name, amount)
+
+Your character
+  character                        name, x, y, z, hp, max_hp, prayer, run_energy, combat_level,
+                                   moving, busy, target, free_slots, levels, base_levels, xp
+  is_busy(), is_moving(), interface_open()
+
+Waiting and timers
+  setInterval(fn, ms), setTimeout(fn, ms), clearInterval(id), clearTimeout(id)
+  sleep(ms), wait_until(check, timeoutMs), until_idle(timeoutMs)
+  Times are rounded up to whole ticks (600 ms).
+
+Messages
+  game_log(text) or console.log(...)   writes to the Playground log
+  set_message(text)                    shows in the Playground status bar
+  say(text)                            your character says it in game
+
+The console line under the log runs one line of code against your running script,
+for example:  character.hp   or   get_nearest_monster({name: "Cow"})

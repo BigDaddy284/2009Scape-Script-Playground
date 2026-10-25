@@ -1,0 +1,16 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {"type": "forever", "args": [], "body": [
+      {"type": "walk", "args": ["Draynor Willows"]},
+      {"type": "chop", "args": ["Willow"]},
+      {"type": "if", "args": ["Inventory Is Full", ""], "body": [
+        {"type": "walk", "args": ["Draynor Bank"]},
+        {"type": "openbank", "args": []},
+        {"type": "deposit", "args": ["Willow logs"]},
+        {"type": "closebank", "args": []}
+      ]}
+    ]}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "walk",
+      "args": [
+        "Rimmington"
+      ]
+    },
+    {
+      "type": "enter_house",
+      "args": [
+        "Building mode"
+      ]
+    },
+    {
+      "type": "build",
+      "args": [
+        "Plant"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+2009 OSRS with Code Edition  (test build 0.5, 16 October 2026)
+==============================================================
+
+What this is
+  The official 2009scape single-player release from 31 July 2026, plus Code Edition:
+  a launcher, a Code orb in the game, and a Script Playground where you build scripts
+  from blocks (like Scratch) or write JavaScript that plays your character.
+  Blocks cover every skill: gathering, making things, Hunter, Farming, Agility, Thieving,
+  combat, Magic, Prayer, Slayer, Summoning and Construction.
+
+How to start
+  1. Double-click "2009 OSRS Code Edition.exe".
+  2. Click "Launch Game". The game world starts, then the game window opens.
+  3. Log in and click "Click here to play".
+  4. To write scripts, click the Code orb (black with a white C, next to the minimap)
+     or "Launch Script Playground" in the launcher.
+
+Things to know
+  - The game works on its own. You never need the Playground to play.
+  - Ctrl+V pastes copied text into the game's chat box and other text boxes (one line, up to 80 letters).
+  - Left-click does the top option and right-click opens the menu. If the game's "one mouse
+    button" option was on, it is switched off when you log in.
+  - The Playground only opens while the game is running. It opens beside the game.
+    If there is no room, the game window is moved left to make space.
+  - Clicking the Code orb again brings the Playground to the front. It never opens a second one.
+  - The game starts in HD (high detail). If you switch to SD, that is remembered, and so are
+    your other game settings (brightness, sound, music, and so on), between launches.
+  - The game switches to resizable mode after you log in, so it fills the window.
+    Type ::autoresize in the game chat to turn that off or on.
+  - When you close the game window, the game world saves your character and closes too.
+    The launcher stays in the taskbar while the game is open.
+  - Each time you click Launch Game, your characters are backed up to the "backups" folder
+    (the newest 20 are kept).
+  - New characters skip Tutorial Island. After you design your character you arrive in
+    Lumbridge with the normal starter items. Ironman modes are not offered.
+  - Levelling up no longer opens a box that stops what you are doing. You still get the
+    jingle, the fireworks and a congratulations line in the chat.
+  - Only one launcher runs at a time. Starting it again brings the open one to the front.
+
+The Script Playground
+  - Basic and Advanced (top right) show the same script as blocks or as JavaScript. Any script
+    can be shown either way, whichever way it was made. Code that isn't a block shows up in
+    Basic as a JavaScript block, so nothing is lost.
+  - Tools (top right, also on the right-click menu of the blocks) copies, cuts, pastes, duplicates and
+    deletes blocks, and Insert Script puts a whole script from your list into the open one.
+    Pick several blocks with Ctrl+click, Shift+click or by dragging a box on empty canvas; Ctrl+A picks all.
+    Ctrl+C, Ctrl+X and Ctrl+V work too, and copied blocks paste into any other script.
+  - Tools > Grab Coordinates (Ctrl+G) turns the pointer into a picker over the game: the map coordinates
+    of the tile under the mouse show below it, and a left click copies them (right-click or Esc cancels).
+    Ctrl+V on the blocks then makes a Walk To with them, or fills the selected Walk To or Is At.
+    Walk To and Is At also have boxes for the coordinates, with Where I am and Grab from game buttons.
+  - Cheats (top right) lists the game's cheat codes, what each one does, and how to type them.
+    Double-click a cheat to copy it, then press Ctrl+V in the game to paste it into the chat box.
+  - The panels can be resized by dragging the lines between them: the script list, the blocks,
+    the Block panel on the right and the log.
+
+Folders
+  game          the game, unchanged apart from the CodeWindow add-on in game\plugins
+  jre           Java 11 that came with the game
+  codeedition   the launcher, the script add-on for the game world, and the JavaScript engine
+  scripts       your scripts (.blocks and .js files) and the examples. The Playground saves here.
+                The older JavaScript versions of the examples are in scripts/javascript examples.
+  backups       character backups
+  logs          logs for the game world and game window, useful if something goes wrong
+  source        source code for the Code Edition parts
+  launch.bat    the original way to start the game, without Code Edition. Still works.
+
+Guides
+  Block guide.txt       every block, what it needs, and the example scripts
+  Scripting guide.txt   writing scripts in JavaScript
+
+If something goes wrong
+  Look in the logs folder. If the game crashes when switching to HD, delete
+  jagex_runescape_preferences.dat from your Windows temp folder (%TEMP%).

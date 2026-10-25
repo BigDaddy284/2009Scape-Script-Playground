@@ -1,0 +1,157 @@
+Script Playground: block guide
+=============================
+
+Block scripts are built from blocks, like Scratch. Click New, then "Block script".
+Basic and Advanced (top right) switch between blocks and the same script as JavaScript.
+Drag a block from the left onto the canvas, or click it to add it at the end.
+Click a block to choose what it works on in the panel on the right.
+
+The panel on the right
+  - Each slot of the block has a button at the top (for example "Item", "On", "How many").
+    Click one, then pick from the list below it, or type a name and press Enter.
+  - The lists come from the game itself: every tree, rock, fish, recipe, spell, prayer,
+    creature, seed, familiar and piece of furniture, with the level it needs.
+  - "Near you" lists show what is around your character right now.
+  - "What it needs" at the bottom checks your levels, the items to bring and any quest.
+    A tick means you have the level, a cross means you don't yet.
+
+Finding blocks
+  The buttons above the blocks are the tabs: Basics, Bank & Items, Use & Make, Gathering,
+  Hunter & Farming, Combat & Magic, House, Logic and Conditions.
+  Type in "Search blocks" to search every tab at once.
+
+When a block can't do its job
+  The script stops, the block turns red, and the game chat says why in plain words,
+  for example "you need Woodcutting level 15 to cut Oak. Yours is 1." or
+  "you must complete the Druidic Ritual quest before you can make Guam potion(unf)."
+
+Basics
+  Walk To          a place from the list, or anyone from the People and Monsters lists, even far
+                   away (it goes to where they live, then up to them). Plans the whole route,
+                   opens doors and gates, crosses stiles and toll gates (bring 10 coins for
+                   Al Kharid), and takes stairs, ladders and trapdoors to other floors.
+                   Agility shortcuts (like the crumbling wall in Falador) are used only when your
+                   Agility level is high enough; otherwise it walks the long way round.
+                   Places you can only reach by boat, by a quest or by teleport aren't in the list.
+                   Some people and monsters live where you can't walk (deep dungeons, islands,
+                   minigames): Walk To says so. Teleport near them first, then Walk To works.
+                   Or map coordinates, like 3222, 3218 (add a third number for the floor:
+                   3205, 3209, 1). Type them in the boxes, press Where I am, or press Grab from game
+                   and click a tile in the game. Tools > Grab Coordinates copies a tile's coordinates.
+  Click Object     any option on the nearest object: Open a door, Climb-up a ladder, Search a crate.
+  Click Person     any option on the nearest person or creature: Trade, Pickpocket, Talk-to.
+  Talk To          talks to someone and waits for them to answer.
+  Press Key        Space or Enter continues a conversation, 1 to 5 picks an option, Escape closes.
+                   List several keys with commas: "Space, Space, 2".
+  Wait For         waits until a dialogue, options, a "how many" menu or a typing box shows up,
+                   or until the dialogue has closed ("No dialogue").
+  Type Answer      types into an "Enter amount" box (or a name box) and presses Enter.
+  Say              says something in the game chat.
+  Run              turns running on or off. Running uses run energy, which comes back as you walk.
+                   Auto turns it on now and again every time your energy gets back up to the %
+                   you set (0 to 100; full when left empty), until the script ends or a Run Off.
+                   Put it first in the script so it covers every walk.
+
+Bank & Items
+  Open Bank, Deposit, Withdraw, Close Bank
+                   Deposit takes all items, some inventory slots (like 2-28) or one kind of item.
+                   Withdraw 0 means all of them.
+  Pick Up          picks up an item from the ground nearby.
+  Drop             drops one kind of item, or some inventory slots.
+  Eat              eats a food, or "Any food".
+  Bury Bones       buries all bones of a kind, or "Any bones".
+
+Use & Make
+  Use Item on Item     uses one item on another (a herb on a vial of water, a knife on logs).
+                       If a "how many" menu opens it picks the product and amount for you.
+                       Leave "Make" empty to take the first product.
+  Use Slot on Slot     the same, by inventory slot number (1 to 28).
+  Use Item on Target   uses an item on something nearby: a range, a furnace, an altar, a person,
+                       a farming patch or an item on the ground.
+  Use Slot on Target   the same, by inventory slot number.
+  Make Item            names the product and the game works out how: a recipe, or the furnace,
+                       anvil, spinning wheel, tanner or obelisk menu. Stand next to the station.
+  Choose in Menu       picks a product in a "how many" menu that is already open.
+  Light Fire           lights logs with a tinderbox and steps aside if a fire can't go there.
+
+Gathering
+  Chop Tree, Mine Rock, Fish
+                   checks your level and your axe, pickaxe, net, rod or bait first.
+                   Fish also finds the spots: name a fish (Lobster, Trout, Shrimps...) and if no
+                   spot for it is nearby, it walks to the nearest one you can reach on foot.
+                   It skips the Wilderness, islands, and the Fishing Guild until Fishing 68.
+                   Walk To takes a fish name too (Shrimps, Lobster, Shark...): it goes to the
+                   spot for that fish that takes the fewest steps to walk to.
+  Craft Runes      crafts essence at an altar, entering the ruins with the talisman or tiara.
+                   Needs the Rune Mysteries quest (and others for some altars).
+  Steal            pickpockets a person, steals from a stall or searches a chest.
+                   Waits out a stun if you get caught. Eat first if your HP is low.
+  Run Agility Course
+                   goes round the Gnome Stronghold, Barbarian Outpost, Wilderness course or the
+                   Agility Pyramid for as many laps as you choose. On the pyramid it climbs to
+                   the top each lap and takes the pyramid top, and after a slip it carries on
+                   from the floor you land on. Bring waterskins for the desert heat; it stops
+                   when your HP gets low. Brimhaven arena needs Click Object for each obstacle.
+
+Hunter & Farming
+  Hunt             lays as many traps as your Hunter level allows for a creature, waits for
+                   a catch and collects it. Carry the traps (bird snares, box traps...).
+  Lay Trap, Check Traps
+                   one trap at a time, and collecting what was caught.
+  Track Kebbit     follows the tracks from a burrow. Needs a noose wand.
+  Rake Patch, Compost Patch, Plant, Water Patch, Cure Patch, Harvest
+                   work on the nearest patch of that kind ("Herb patch", "Allotment"),
+                   or the nearest patch of any kind ("Farming patch").
+                   Plant uses a seed dibber for seeds and a spade for saplings.
+                   Compost goes on an empty, weeded patch before planting.
+
+Combat & Magic
+  Attack           fights the nearest monster with that name until it dies.
+  Attack Slayer Task
+                   fights the nearest monster of your current Slayer task.
+  Auto Retaliate   on or off.
+  Cast Spell       teleports (nothing to choose), alchemy and enchanting (choose an item),
+                   combat spells (choose a monster). Checks your level, runes and spellbook.
+                   An elemental staff counts as its runes.
+  Prayer           turns a prayer on or off.
+  Recharge         prays at the nearest altar, or renews Summoning points at an obelisk.
+  Summon           summons a familiar from its pouch. Needs the Wolf Whistle quest.
+                   Make pouches with Make Item at an obelisk.
+
+House
+  Enter House      goes in through your house portal, normally or in building mode.
+  Build            builds furniture on the nearest empty spot that takes it.
+                   Needs building mode, a hammer, a saw and the materials.
+
+Logic
+  Repeat Forever, Repeat (a number of times), Repeat Until (a condition),
+  If, If / Else, Wait (seconds), Stop Script.
+  JavaScript       runs your own code. Click it to edit the code in the panel on the right.
+                   Code from the Advanced view that isn't a block shows up as this block.
+
+Conditions (for If and Repeat Until)
+  Inventory Is Full / Is Not Full / Is Empty, Has Item, Does Not Have Item,
+  HP Below %, Is In Combat, Is Not In Combat, Is At (a place or map coordinates), Bank Is Open,
+  Dialogue Is Open, Options Are Showing, Make Menu Is Open, Quest Is Complete,
+  Level Is At Least, Level Is, Level Is Not, Level Is Below (each with a skill and a level,
+  like "If Woodcutting Level Is Below 15"), Has Slayer Task, Prayer Is On,
+  Prayer Points Below, Has Familiar, Is In House, Run Is On, Run Is Off,
+  Run Energy Below and Run Energy Is At Least (a % from 1 to 100).
+
+Examples
+  The scripts folder has an example for each kind of skill, named example_....blocks:
+  chopping and banking, fishing and cooking, smelting, potions, talking to Hans,
+  pickpocketing, agility laps, High Alchemy, a herb run, hunting, runecrafting,
+  Slayer, prayer, Summoning and building in your house.
+  Open one, click Run, and watch each block light up as it runs.
+
+Blocks in JavaScript
+  Every block is also a function you can call from a JavaScript script, inside blocks.run:
+
+    blocks.run(async () => {
+      await blocks.walk_to("b1", "Draynor Willows");
+      await blocks.fish("b2", "Shrimps");
+      await blocks.use_item_on_item("b3", "Knife", "Logs", 0, "Arrow shaft");
+    });
+
+  The first value is a name for the step (it shows in the log when something stops).

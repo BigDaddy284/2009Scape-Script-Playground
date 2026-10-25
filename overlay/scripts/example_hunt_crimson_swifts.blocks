@@ -1,0 +1,43 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "forever",
+      "args": [],
+      "body": [
+        {
+          "type": "hunt",
+          "args": [
+            "Crimson swift"
+          ]
+        },
+        {
+          "type": "check_traps",
+          "args": []
+        },
+        {
+          "type": "if",
+          "args": [
+            "Inventory Is Full",
+            ""
+          ],
+          "body": [
+            {
+              "type": "drop",
+              "args": [
+                "Raw bird meat"
+              ]
+            },
+            {
+              "type": "bury",
+              "args": [
+                "Bones"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

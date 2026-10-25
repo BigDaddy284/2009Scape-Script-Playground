@@ -1,0 +1,52 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "forever",
+      "args": [],
+      "body": [
+        {
+          "type": "ifelse",
+          "args": [
+            "Has Slayer Task",
+            ""
+          ],
+          "body": [
+            {
+              "type": "if",
+              "args": [
+                "HP Below %",
+                "40"
+              ],
+              "body": [
+                {
+                  "type": "eat",
+                  "args": [
+                    "Any food"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "attack_task",
+              "args": []
+            }
+          ],
+          "else": [
+            {
+              "type": "say",
+              "args": [
+                "Task done!"
+              ]
+            },
+            {
+              "type": "stop",
+              "args": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

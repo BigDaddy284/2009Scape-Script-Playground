@@ -1,0 +1,51 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "repeat",
+      "args": [
+        "10"
+      ],
+      "body": [
+        {
+          "type": "walk",
+          "args": [
+            "Falador east bank"
+          ]
+        },
+        {
+          "type": "openbank",
+          "args": []
+        },
+        {
+          "type": "deposit",
+          "args": [
+            "Inventory 2–28"
+          ]
+        },
+        {
+          "type": "withdraw",
+          "args": [
+            "Rune essence",
+            "0"
+          ]
+        },
+        {
+          "type": "closebank",
+          "args": []
+        },
+        {
+          "type": "walk",
+          "args": [
+            "Air altar"
+          ]
+        },
+        {
+          "type": "craft_runes",
+          "args": []
+        }
+      ]
+    }
+  ]
+}

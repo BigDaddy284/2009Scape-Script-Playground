@@ -1,0 +1,54 @@
+{
+  "format": "code-edition-blocks",
+  "version": 2,
+  "blocks": [
+    {
+      "type": "forever",
+      "args": [],
+      "body": [
+        {
+          "type": "walk",
+          "args": [
+            "Draynor Willows"
+          ]
+        },
+        {
+          "type": "fish",
+          "args": [
+            "Shrimps"
+          ]
+        },
+        {
+          "type": "if",
+          "args": [
+            "Inventory Is Full",
+            ""
+          ],
+          "body": [
+            {
+              "type": "walk",
+              "args": [
+                "Lumbridge south range"
+              ]
+            },
+            {
+              "type": "use_item_on_target",
+              "args": [
+                "Raw shrimps",
+                "Range",
+                "0",
+                "Shrimps"
+              ]
+            },
+            {
+              "type": "drop",
+              "args": [
+                "Burnt shrimp"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

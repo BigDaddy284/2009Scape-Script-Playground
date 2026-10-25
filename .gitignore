@@ -1,0 +1,10 @@
+# Never commit the 2009scape game files (Jagex client and cache) or personal saves
+/game/
+/jre/
+**/data/cache/
+**/data/players/
+backups/
+logs/
+*.log
+**/out/
+.idea/
