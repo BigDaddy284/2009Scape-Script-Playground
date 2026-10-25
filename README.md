@@ -89,8 +89,8 @@ The installer only adds files. It never changes `server.jar`, `client.jar` or th
 1. Click the **Code orb** next to the minimap, or **Launch Script Playground** in the launcher.
 2. Click **New**, then **Block script**.
 3. From the **Basics** tab, drag in **Walk To** and pick *Lumbridge cows* in the panel on the right.
-4. From **Combat & Magic**, add an attack block and pick *Cow*. Wrap it in a repeat block from
-   **Logic**.
+4. From **Logic**, add **Repeat Forever**. Inside it, put **Attack** from **Combat & Magic** and
+   pick *Cow*.
 5. Press **Run**. Your character walks to the cows and starts fighting. Press **Stop** at any time.
 
 If a block can't do its job, the script stops, that block turns red and the game chat says why,
